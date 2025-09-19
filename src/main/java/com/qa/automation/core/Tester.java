@@ -6,6 +6,8 @@ public class Tester extends Employee {
 
     public Tester(String name, double salary, String testingTool) {
         super(name, salary);
+        if (testingTool == null || testingTool.isBlank())
+            throw new IllegalArgumentException("Testing tool required");
         this.testingTool = testingTool;
     }
 
